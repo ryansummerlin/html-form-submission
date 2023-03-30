@@ -117,7 +117,7 @@ const server = http.createServer((req, res) => {
     }
 
     if (req.method === 'POST' && req.url === '/dog') {
-      dog = new Dog({naem: req.body.name,
+      dog = new Dog({name: req.body.name,
         color: req.body.color,
         age: req.body.age,
         description: req.body.description});
@@ -132,6 +132,6 @@ const server = http.createServer((req, res) => {
   });
 });
 
-const port = 5000;
+const port = 3000;
 
 server.listen(port, () => console.log("Server is listening on port", port));
